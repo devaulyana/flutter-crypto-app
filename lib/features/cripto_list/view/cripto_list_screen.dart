@@ -15,13 +15,11 @@ class CryptoCoinScreen extends StatefulWidget {
 class _CryptoCoinScreenState extends State<CryptoCoinScreen> {
   late Future<List<CryptoCoin>> _coinsFuture;
   final _repo = CryptoCoinsRepository(dio: Dio()); // создаём один раз
-  final _cryptoListBloc = CryptoListBloc();
 
   @override
   void initState() {
     super.initState();
     _loadCoins();
-    _cryptoListBloc.add(LoadCryptoList());
   }
 
   void _loadCoins() {
