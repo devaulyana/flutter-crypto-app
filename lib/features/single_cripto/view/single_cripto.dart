@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Cryptocoin extends StatelessWidget {
-  const Cryptocoin({super.key});
+class CryptoCoinDetailsScreen extends StatelessWidget {
+  const CryptoCoinDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

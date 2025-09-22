@@ -9,7 +9,6 @@ class Miapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: darktheme,
-      initialRoute: '/coins-list',
       routes: routes,
     );
   } 
