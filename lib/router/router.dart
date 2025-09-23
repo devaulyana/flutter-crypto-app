@@ -4,5 +4,5 @@ import 'package:flutter_application_1/features/single_cripto/view/single_cripto.
 
 final routes = {
   '/': (context) => const CryptoListScreen(),
-  '/coin': (context) => const CryptoCoinDetailsScreen(),
+  '/coin': (context) => const CryptoCoinScreen(),
 };
