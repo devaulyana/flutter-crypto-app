@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/features/single_cripto/bloc/cripto_coin_details/crypto_coin_details_bloc.dart';
 import 'package:flutter_application_1/features/single_cripto/widgets/base_card.dart';

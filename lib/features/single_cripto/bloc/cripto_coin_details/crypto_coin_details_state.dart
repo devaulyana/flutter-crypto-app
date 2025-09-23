@@ -21,7 +21,7 @@ class CryptoCoinDetailsLoaded extends CryptoCoinDetailsState {
 }
 
 class CryptoCoinDetailsLoadingFailure extends CryptoCoinDetailsState {
-  const CryptoCoinDetailsLoadingFailure(this.exception);
+  const CryptoCoinDetailsLoadingFailure(this.exception, StackTrace st);
 
   final Object exception;
 
