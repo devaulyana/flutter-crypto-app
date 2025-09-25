@@ -38,7 +38,8 @@ class _CryptoCoinScreenState extends State<CryptoCoinScreen> {
         bloc: _coinDetailsBloc,
         builder: (context, state) {
           if (state is CryptoCoinDetailsLoaded) {
-            final coinDetails = state.coinDetails;
+            final coin = state.coin;
+            final coinDetails = coin.details;
             return Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,11 +47,11 @@ class _CryptoCoinScreenState extends State<CryptoCoinScreen> {
                   SizedBox(
                     height: 160,
                     width: 160,
-                    child: Image.network(coinDetails.imageUrl!),
+                    child: Image.network(coinDetails.fullImageUrl),
                   ),
                   const SizedBox(height: 24),
                   Text(
-                    coinDetails.name,
+                    coin.name,
                     style: const TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.w700,
@@ -73,12 +74,12 @@ class _CryptoCoinScreenState extends State<CryptoCoinScreen> {
                       children: [
                         _DataRow(
                           title: 'Hight 24 Hour',
-                          value: '${coinDetails.hight24Hour.toStringAsFixed(2)} \$',
+                          value: '${coinDetails.high24Hour.toStringAsFixed(2)} \$',
                         ),
                         const SizedBox(height: 6),
                         _DataRow(
                           title: 'Low 24 Hour',
-                          value: '${coinDetails.low24Hours.toStringAsFixed(2)} \$',
+                          value: '${coinDetails.low24Hour.toStringAsFixed(2)} \$',
                         ),
                       ],
                     ),
